@@ -1,3 +1,3 @@
 # React Projects
 
-React projects for my portfolio.
+React projects to learn
