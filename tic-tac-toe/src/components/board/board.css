@@ -1,0 +1,32 @@
+.board {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2px;
+    justify-items: center;
+    align-items: center;
+    aspect-ratio: 1;
+    animation: input 3s ease-in-out forwards;
+}
+  
+@keyframes input {
+    0% {
+      background: #242424;
+    }
+    100% {
+      background: white
+    }
+}
+  
+@media (width>650px) {
+    .board {
+      width: 30%;
+    }
+}
+  
+@media (width>1000px) {
+    .board {
+      width: 20%;
+    }
+}
