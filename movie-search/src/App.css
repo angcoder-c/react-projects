@@ -1,0 +1,36 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.movies-pool {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  margin: 5% 5% 0 5%;
+}
+
+.movie-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  background-color: #0d0d0d;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  z-index: 10;
+  transition-duration: 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.1);
+  z-index: 11;
+  transition-duration: 0.8s;
+  box-shadow: 0 0 50px 5px white;
+}
+
+.movie-poster img {
+  width: 100%;
+}
