@@ -1,8 +1,11 @@
-# React + Vite
+# Rick and Morty character finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![ViteReact-GoogleChrome2024-12-1219-30-36-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/823c04e8-0e19-400e-b503-a62f21237253)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A simple project to practice data fetching and React methods like useRef and useCallback.
+
+Features 
+
+- Filter by dead or alive characters 
+- Search characters by name and species
