@@ -1,3 +1,5 @@
+import './form.css'
+
 const Form = ({
     onSubmit,
     setSearch, 
@@ -6,9 +8,10 @@ const Form = ({
 }) => {
     return (
         <>
-            <form onSubmit={onSubmit}>
-                <input type="text" id="search" onChange={setSearch}/>
-                <input type="text" id="species" onChange={setSpecies}/>
+            <form onSubmit={onSubmit} className='form'>
+                <input placeholder="Character" type="text" id="search" onChange={setSearch}/>
+                <input placeholder="Species" type="text" id="species" onChange={setSpecies}/>
+                <button type="submit">Search</button>
                 <div className="filters">
                     <div className="filter">
                         <input type="checkbox" id="alive" onChange={setStatus} />
@@ -19,7 +22,6 @@ const Form = ({
                         <label htmlFor="dead">Dead</label>
                     </div>
                 </div>
-                <button type="submit">Search</button>
             </form>
         </>
     )

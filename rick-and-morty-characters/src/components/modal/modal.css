@@ -1,0 +1,34 @@
+.hidden {
+    display: none !important;
+}
+
+.modal {
+    background-color: #242424;
+    border-radius: 10px;
+    width: 200px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-container {
+    background-color: rgb(102, 140, 48, 0.4);
+    backdrop-filter: blur(10px);
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    display: flex;
+}
+
+h4 {
+    display: inline;
+}
+
+.modal button {
+    width: 100%;
+    padding: 20px;
+}

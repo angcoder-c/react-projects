@@ -7,11 +7,11 @@ const useCharacter = ({search, species}) => {
     const [error, setError] = useState(null)
     const previousSearch = useRef(search);
 
-    const getCharacters = useCallback(async (name, status)=>{
+    const getCharacters = useCallback(async (name, status, page)=>{
         setLoading(true)
         setError(null)
         try {
-            const chars = await fetchCharacters({name, status})
+            const chars = await fetchCharacters({name, status, page})
             previousSearch.current=search
             setCharacters(chars)
         } catch (err) {
