@@ -4,14 +4,13 @@ import Card from '../card/card'
 const Products = ({
     products
 }) => {
-    
     return (
         <div className='products-pool'>
             {
-                products?.map((product, index) => {
+                products?.map(product => {
                     return (
                         <Card 
-                        key={index} 
+                        key={product.id} 
                         product={product}
                         />
                     )

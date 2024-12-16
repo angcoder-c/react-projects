@@ -1,34 +1,33 @@
 import Products from './components/products/products'
 import Header from './components/header/header'
-import MockResponse from './mocks/response.json'
-import { FiltersContext } from './context/filterContext'
+import useFilters from './hooks/useFilters'
+import CartProvider from './context/cartContext'
+import Cart from './components/cart/cart'
 import './App.css'
-import { useState, useContext, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 function App() {
-  const [products, setProducts] = useState(MockResponse)
-  const [filtered, setFilteredProducts] = useState(MockResponse)
-  const {filters, setFilters} = useContext(FiltersContext)
+	const {filterProducts} = useFilters()
+	const [products, setProducts] = useState([])
 
-  useEffect(()=>{
-		const filterProducts = products.filter(product=>{
-			return (
-				product.price>filters.minPrice && (
-					product.category===filters.category ||
-					filters.category==='all'
-			))
-		})
-		setFilteredProducts(filterProducts)
-	}, [filters])
+	useEffect(()=>{
+		const getProducts = async () => {
+			setProducts(await filterProducts())
+		}
+		getProducts()
+	}, [products])
 
-  return (
-    <>
-      <Header/>
-      <Products 
-		products={filtered}
-		/>
-    </>
-  )
+	return (
+		<CartProvider>
+			<main>
+				<Header/>
+				<Products 
+				products={products}
+				/>
+			</main>
+			<Cart/>
+		</CartProvider>
+	)
 }
 
 export default App

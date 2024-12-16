@@ -1,0 +1,56 @@
+.filters-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 10% 0;
+}
+
+.price-filter input[type="range"]{
+    overflow: hidden;
+    width: 80px;
+    max-height: 20px;
+    appearance: none;
+    background-color: transparent;
+    box-shadow: 0 0 2px 1px white;
+    border-radius: 10px;
+}
+
+.price-filter input[type="range"]::-webkit-slider-thumb{
+    width: 20px;
+    appearance: none;
+    height: 20px;
+    background: #7cff73;
+    border-radius: 100%;
+    box-shadow: -85px 0 0 80px #397c35;
+}
+
+.category-filter select{
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 1px white;
+    color: white;
+}
+
+.category-filter option{
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: #242424;
+    box-shadow: 0 0 2px 1px white;
+}
+
+.price-filter, .category-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-filter div {
+    display: flex;
+    gap: 10px;
+}

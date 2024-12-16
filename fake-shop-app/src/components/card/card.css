@@ -1,6 +1,76 @@
 .product-card-container {
-    width: 100px;
-    height: 100px;
-    background-color: brown;
-    border: 1px solid
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+}
+
+.product-card-container:hover {
+    box-shadow: 0 0 5px 1px white;
+}
+
+.product-card-img  {
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.cover-image-hover{
+    position: absolute;
+    background-color: transparent;
+    border-radius: 10px;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transition-duration: 0.2s;
+}
+.cover-image-hover:hover{
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.product-card-img img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    z-index: 10;
+}
+
+.product-card-info-txt {
+    height: 4rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.product-card-info-txt h4 {
+    margin: 0;
+}
+
+.remove-button, .add-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    transition-duration: 0.2s;
+}
+
+.remove-button {
+    background-color: #fd7a7a;
+    color: #292929;
+}
+
+.add-button {
+    background-color: #7cff73;
+    color: #292929;
+}
+
+.remove-button:hover {
+    background-color: #b84f4f;
+    color: white;
+}
+
+.add-button:hover {
+    background-color: #4eb547;
 }

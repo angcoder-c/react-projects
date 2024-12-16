@@ -1,9 +1,9 @@
-import { useContext, useEffect, useId, useState } from 'react'
-import { FiltersContext } from '../../context/filterContext'
+import { useId } from 'react'
+import useFilters from '../../hooks/useFilters'
 import './filters.css'
 
 const Filters = () => {
-    const {filters, setFilters} = useContext(FiltersContext)
+    const {filters, setFilters} = useFilters()
     const minPriceFilterId = useId()
     const categoryFilterId = useId()
     
@@ -22,17 +22,19 @@ const Filters = () => {
     return (
         <section className='filters-container'>
             <div className='price-filter'>
-                <label htmlFor={minPriceFilterId}>Minimun price: </label>
-                <input 
-                type="range" 
-                id={minPriceFilterId}
-                onChange={handleOnChangePriceFilters}
-                value={filters.minPrice}
-                min="0"
-                max="500"
-                step={25}
-                />
-                <span>$ {filters.minPrice}</span>
+                <label htmlFor={minPriceFilterId}>Minimun price</label>
+                <div>
+                    <input 
+                    type="range" 
+                    id={minPriceFilterId}
+                    onChange={handleOnChangePriceFilters}
+                    value={filters.minPrice}
+                    min="0"
+                    max="500"
+                    step={25}
+                    />
+                    <span>$ {filters.minPrice}</span>
+                </div>
             </div>
             <div className='category-filter'>
                 <label htmlFor={categoryFilterId}>Category</label>
