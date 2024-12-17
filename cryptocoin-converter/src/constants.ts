@@ -1,4 +1,4 @@
-export const SUPPORTED_COINS = {
+export const SUPPORTED_ASSETS = {
     BTC: 'bitcoin',
     ETH: 'ethereum',
     USDT: 'tether',

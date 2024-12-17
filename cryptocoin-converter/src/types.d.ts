@@ -1,19 +1,23 @@
-import { SUPPORTED_COINS } from "./constants"
+import { SUPPORTED_ASSETS } from "./constants"
 
-export type Cryptocoin = keyof typeof SUPPORTED_COINS
+export type Cryptocurrency = keyof typeof SUPPORTED_ASSETS
+
+export interface CryptocurrencyValues {
+    usd : number,
+    amount : number
+}
 
 export interface StateReducer {
-    fromCryptocoin : Cryptocoin
-    toCryptocoin : Cryptocoin
-    fromCryptocoinValueUSDValue : string
-    fromCryptocoinValueValue : string
-    toCryptocoinValueUSDValue : string
-    result : string
+    fromCryptocurrency : Cryptocurrency
+    toCryptocurrency : Cryptocurrency
+    fromCryptocurrencyValue : CryptocurrencyValues
+    toCryptocurrencyValue : CryptocurrencyValues
+    loading : boolean
 }
 
 export type ActionReducer = 
-   | { type : 'INTERCHANGE_CRYPTOCOIN' }
-   | { type : 'SET_FROM_CRYPTOCOIN', payload : Cryptocoin }
-   | { type : 'SET_TO_CRYPTOCOIN', payload : Cryptocoin }
-   | { type : 'SET_FROM_CRYPTOCOIN_VALUE', payload : string }
-   | { type : 'SET_RESULT_VALUE', payload : string }
+   | { type : 'INTERCHANGE_CRYPTOCURRENCY' }
+   | { type : 'SET_FROM_CRYPTOCURRENCY', payload : Cryptocurrency }
+   | { type : 'SET_TO_CRYPTOCURRENCY', payload : Cryptocurrency }
+   | { type : 'SET_FROM_CRYPTOCURRENCY_VALUE', payload : CryptocurrencyValues }
+   | { type : 'SET_TO_CRYPTOCURRENCY_VALUE', payload : CryptocurrencyValues }
