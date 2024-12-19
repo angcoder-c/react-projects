@@ -1,116 +1,117 @@
-import { useReducer } from "react";
-import { type StateReducer, type ActionReducer, type Cryptocurrency, CryptocurrencyValues } from "../types";
+import { useReducer } from "react"
+import { ActionReducer, Cryptocurrency, StateReducer } from "../types"
 
 const initialState : StateReducer = {
-    fromCryptocurrency : 'BTC',
-    toCryptocurrency : 'ETH',
-    fromCryptocurrencyValue : {
-        usd : 0,
-        amount : 0
-    },
-    toCryptocurrencyValue : {
-        usd : 0, 
-        amount : 0
-    },
-    loading:false
+    fromCurrency : "BTC",
+    toCurrency : "ETH",
+    fromCurrencyUsd : 0,
+    toCurrencyUsd : 0,
+    fromAmount : 0,
+    toAmount : 0,
+    loading : false
 }
 
-const reducer = (state : StateReducer, action : ActionReducer) => {
+const reducer = ( state : StateReducer, action : ActionReducer ) => {
     const { type } = action
 
-    if (type==='INTERCHANGE_CRYPTOCURRENCY') {
-        const loading = state.fromCryptocurrencyValue.amount!==0
+    if (type==='SET_FROM_CURRENCY') {
         return {
             ...state,
-            loading : loading,
-            fromCryptocurrency : state.toCryptocurrency,
-            toCryptocurrency : state.fromCryptocurrency,
-            fromCryptocurrencyValue : state.toCryptocurrencyValue,
-            toCryptocurrencyValue : state.fromCryptocurrencyValue
-        }
-    }
-
-    if (type==='SET_FROM_CRYPTOCURRENCY') {
-        const loading = state.fromCryptocurrencyValue.amount!==0
-        return {
-            ...state,
-            loading : loading, 
-            fromCryptocurrency : action.payload
-        }
-    }
-
-    if (type==='SET_TO_CRYPTOCURRENCY') {
-        const loading = state.fromCryptocurrencyValue.amount!==0
-        return {
-            ...state,
-            loading : loading,
-            toCryptocurrency : action.payload
-        }
-    }
-
-    if (type==='SET_FROM_CRYPTOCURRENCY_VALUE') {
-        const loading = action.payload.amount!==0
-        return {
-            ...state,
-            loading : loading,
-            fromCryptocurrencyValue : action.payload
-        }
-    }
-
-
-    if (type==='SET_TO_CRYPTOCURRENCY_VALUE') {
-        const amountResult = (action.payload.usd * state.fromCryptocurrencyValue.amount) / state.fromCryptocurrencyValue.usd  
-        return {
-            ...state,
-            location : false,
-            toCryptocurrencyValue : {
-                usd : action.payload.usd,
-                amount : amountResult
-            }
+            loading : true,
+            fromCurrency : action.payload
         } 
     }
+
+    if (type==='SET_TO_CURRENCY') {
+        return {
+            ...state,
+            loading : true,
+            toCurrency : action.payload
+        } 
+    }
+
+    if (type==='SET_FROM_CURRENCY_USD') {
+        return {
+            ...state,
+            fromCurrencyUsd : action.payload
+        } 
+    }
+
+    if (type==='SET_TO_CURRENCY_USD') {
+        return {
+            ...state,
+            toCurrencyUsd : action.payload
+        } 
+    }
+
+    if (type==='SET_FROM_CURRENCY_AMOUNT') {
+        return {
+            ...state,
+            fromAmount : action.payload
+        } 
+    }
+
+    if (type==='SET_TO_CURRENCY_AMOUNT') {
+        return {
+            ...state,
+            loading : false,
+            toAmount : action.payload
+        } 
+    }
+
     return state
 }
 
-export const useStore = (value = initialState) => {
+const useAssets = (init = initialState) => {
     const [{
-        fromCryptocurrency,
-        toCryptocurrency,
-        fromCryptocurrencyValue,
-        toCryptocurrencyValue,
+        fromCurrency,
+        toCurrency,
+        fromCurrencyUsd,
+        toCurrencyUsd,
+        fromAmount,
+        toAmount,
         loading
-    }, dispatch] = useReducer(reducer, value)
+    }, dispatch] = useReducer(reducer, init)
 
-    const interchangeCryptocurrency = () => {
-        dispatch({ type : 'INTERCHANGE_CRYPTOCURRENCY' })
+    const setFromCurrency = (symbol : Cryptocurrency) => {
+        dispatch({ type : 'SET_FROM_CURRENCY', payload : symbol })
     }
 
-    const setFromCryptocurrency = (symbol : Cryptocurrency) => {
-        dispatch({ type : 'SET_FROM_CRYPTOCURRENCY', payload : symbol })
+    const setToCurrency = (symbol : Cryptocurrency) => {
+        dispatch({ type : 'SET_TO_CURRENCY', payload : symbol })
     }
 
-    const setToCryptocurrency = (symbol : Cryptocurrency) => {
-        dispatch({ type : 'SET_TO_CRYPTOCURRENCY', payload : symbol })
+    const setFromCurrencyUsd = (value : number) => {
+        dispatch({ type : 'SET_FROM_CURRENCY_USD', payload : value })
     }
 
-    const setFromCryptocurrencyValue = (assetValues : CryptocurrencyValues) => {
-        dispatch({ type : 'SET_FROM_CRYPTOCURRENCY_VALUE', payload : assetValues})
+    const setToCurrencyUsd = (value : number) => {
+        dispatch({ type : 'SET_TO_CURRENCY_USD', payload : value })
     }
 
-    const setToCryptocurrencyValue = (assetValues : CryptocurrencyValues) => {
-        dispatch({ type : 'SET_TO_CRYPTOCURRENCY_VALUE', payload : assetValues})
+    const setFromAmount = (value : number) => {
+        dispatch({ type : 'SET_FROM_CURRENCY_AMOUNT', payload : value })
     }
 
+    const setToAmount = (value : number) => {
+        dispatch({ type : 'SET_TO_CURRENCY_AMOUNT', payload : value })
+    }
+    
     return {
-        fromCryptocurrency,
-        setFromCryptocurrency,
-        toCryptocurrency,
-        setToCryptocurrency,
-        fromCryptocurrencyValue,
-        setFromCryptocurrencyValue,
-        toCryptocurrencyValue,
-        setToCryptocurrencyValue,
+        fromCurrency,
+        toCurrency,
+        fromCurrencyUsd,
+        toCurrencyUsd,
+        fromAmount,
+        toAmount,
         loading,
-        interchangeCryptocurrency
+        setFromCurrency,
+        setToCurrency,
+        setFromCurrencyUsd,
+        setToCurrencyUsd,
+        setFromAmount,
+        setToAmount
     }
 }
+
+export default useAssets
