@@ -1,0 +1,30 @@
+.amount-input {
+    appearance: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 10px;
+    background-color: #343434;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    width:100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    transition-duration: 0.1s;
+}
+
+.amount-input:disabled:hover {
+    border: 1px solid #43ff75;
+}
+
+.amount-input:enabled:focus {
+    border: 1px solid #43ff75;
+    background-color: #252525;
+}
+
+.amount-input:enabled:hover {
+    border: 1px solid #43ff75;
+    transition-duration: 0.2s;
+}

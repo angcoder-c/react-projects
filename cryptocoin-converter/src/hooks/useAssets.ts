@@ -14,6 +14,19 @@ const initialState : StateReducer = {
 const reducer = ( state : StateReducer, action : ActionReducer ) => {
     const { type } = action
 
+    if (type==='INTERCHANGE_CRYPTOCURRENCY') {
+        return {
+            ...state,
+            loading : true,
+            fromCurrency : state.toCurrency,
+            toCurrency : state.fromCurrency,
+            fromCurrencyUsd : state.toCurrencyUsd,
+            toCurrencyUsd : state.fromCurrencyUsd,
+            fromAmount : state.toAmount,
+            toAmount : state.fromAmount,
+        } 
+    }
+
     if (type==='SET_FROM_CURRENCY') {
         return {
             ...state,
@@ -73,6 +86,10 @@ const useAssets = (init = initialState) => {
         loading
     }, dispatch] = useReducer(reducer, init)
 
+    const interchange = () => {
+        dispatch({ type : 'INTERCHANGE_CRYPTOCURRENCY' })
+    }
+
     const setFromCurrency = (symbol : Cryptocurrency) => {
         dispatch({ type : 'SET_FROM_CURRENCY', payload : symbol })
     }
@@ -110,7 +127,8 @@ const useAssets = (init = initialState) => {
         setFromCurrencyUsd,
         setToCurrencyUsd,
         setFromAmount,
-        setToAmount
+        setToAmount,
+        interchange
     }
 }
 

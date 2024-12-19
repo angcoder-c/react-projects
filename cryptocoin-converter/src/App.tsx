@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
 import useAssets from './hooks/useAssets'
 import fetchAssets from './services/fetchAssets'
-import { Cryptocurrency, GetPriceProps, getPriceType } from './types.d'
+import { type Cryptocurrency, type GetPriceProps, getPriceType } from './types.d'
+import SelectAsset from './components/selectForm/selectForm'
 import { SUPPORTED_ASSETS } from './constants'
+import Amount from './components/amount/amount'
+import ShowUsdValue from './components/showUsdValue/showUsdValue'
 
 function App() {
   const {
@@ -19,8 +22,13 @@ function App() {
       setFromCurrencyUsd,
       setToCurrencyUsd,
       setFromAmount,
-      setToAmount
+      setToAmount,
+      interchange
   } = useAssets()
+
+  const handleInterchange = (event : React.MouseEvent<HTMLButtonElement>) => {
+    interchange()
+  }
 
   const handleFromCurrency = (event : React.ChangeEvent<HTMLSelectElement>) => {
     setFromCurrency(event.target.value as Cryptocurrency)
@@ -32,7 +40,7 @@ function App() {
 
   const setToAmountWithFilter = ({ from, to, amount } : { from : number, to : number, amount : number }) => {
     if (to > 0) {
-      setToAmount((from / to) * amount);
+      setToAmount(Number(((from / to) * amount).toFixed(2)));
     }
   }
 
@@ -77,20 +85,42 @@ function App() {
 
   return (
     <>
-      <h1>Cryptocurrency App</h1>
-      <select onChange={handleFromCurrency} value={fromCurrency}>
-        <option value="BTC">bitcoin</option>
-        <option value="ETH">ethereum</option>
-      </select>
-      <p>{fromCurrencyUsd}</p>
-      <input type="text" onChange={handleFromAmount}/>
-      <select onChange={handleToCurrency} value={toCurrency}>
-        <option value="BTC">bitcoin</option>
-        <option value="ETH">ethereum</option>
-      </select>
-      <p>{toCurrencyUsd}</p>
-      <input value={loading?'Loading...':toAmount} disabled/>
-      
+      <header>
+        <h1>Cryptocurrency App</h1>
+      </header>
+      <main>
+        <div className='currency'>
+          <SelectAsset
+            defaultValue={fromCurrency}
+            onChange={handleFromCurrency}
+            />
+          <ShowUsdValue
+            usd={fromCurrencyUsd}
+            />
+          <Amount
+            type={getPriceType.From}
+            onChange={handleFromAmount}
+            value={fromAmount}
+            />
+        </div>
+        <button className='interchange-button' onClick={handleInterchange}>
+          🔄️
+        </button>
+        <div className='currency'>
+          <SelectAsset
+            defaultValue={toCurrency}
+            onChange={handleToCurrency}
+            />
+          <ShowUsdValue
+            usd={toCurrencyUsd}
+            />
+          <Amount
+            type={getPriceType.To}
+            loading={loading}
+            amount={toAmount}
+            />
+        </div>
+      </main>
     </>
   )
 }

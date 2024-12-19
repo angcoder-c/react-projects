@@ -1,0 +1,18 @@
+.show-usd {
+    appearance: none;
+    margin: 0;
+    resize: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    height: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #343434;
+    border: 1px solid transparent;
+    transition-duration: 0.1s;
+}
+
+.show-usd:hover {
+    border: 1px solid #43ff75;
+}
