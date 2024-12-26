@@ -1,56 +1,42 @@
-import React, { ChangeEvent } from 'react'
+import React from 'react'
 import useUsers from './hooks/useUsers'
+import UsersTable from './components/usersTable'
+import Filters from './components/filters'
 import './App.css'
 
 function App() {
-  const { users, filteredUsers, countryField, filters, deleteUser, orderByName, resetFilters, setCountryField } = useUsers()
+  const { 
+    users, 
+    filteredUsers, 
+    countryField, 
+    filters, 
+    deleteUser, 
+    orderByName,
+    orderByLastname, 
+    orderByCountry,
+    resetFilters,
+    setCountryField 
+  } = useUsers()
   let retUsers = filters ? filteredUsers : users
-  const handleCountryFilter = (event:ChangeEvent<HTMLInputElement>) => {
+  const handleCountryFilter = (event:React.ChangeEvent<HTMLInputElement>) => {
     setCountryField(event.target.value)
   }
 
   return (
     <>
-      <h1>Hello world</h1>
-      <button onClick={()=>{
-        orderByName()
-      }}>filter by name</button>
-      <button onClick={()=>{
-        resetFilters()
-      }}>reset</button>
-      <input type="text" onChange={handleCountryFilter} value={countryField}/>
-      <table>
-        <thead>
-          <tr>
-            <th>Photo</th>
-            <th>Name</th>
-            <th>Lastname</th>
-            <th>Country</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            retUsers.map(
-              (user, index) => (
-                <tr key={user.email+index}>
-                  <td>
-                    <img src={user.image} alt={user.email} />
-                  </td>
-                  <td>{ user.name }</td>
-                  <td>{ user.lastname }</td>
-                  <td>{ user.country }</td>
-                  <td>
-                    <button onClick={()=>{
-                      deleteUser(user.email)
-                    }}>Button</button>
-                  </td>
-                </tr>
-              )
-            )
-          }
-        </tbody>
-      </table>
+      <h1>Redux-Users</h1>
+      <Filters
+        resetFilters={resetFilters}
+        handleCountryFilter={handleCountryFilter}
+        countryField={countryField}
+      />
+      <UsersTable
+        users={retUsers}
+        deleteUser={deleteUser}
+        orderByCountry={orderByCountry}
+        orderByLastname={orderByLastname}
+        orderByName={orderByName}
+      />
     </>
   )
 }

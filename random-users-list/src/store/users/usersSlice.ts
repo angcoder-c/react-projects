@@ -98,5 +98,10 @@ export const usersSlice = createSlice({
         })
     }
 })
-export const { deleteUserAction, OrderBy, resetFiltersAction, setCountryFieldAction } = usersSlice.actions
+export const { 
+    deleteUserAction, 
+    OrderBy, 
+    resetFiltersAction, 
+    setCountryFieldAction 
+} = usersSlice.actions
 export default usersSlice.reducer
