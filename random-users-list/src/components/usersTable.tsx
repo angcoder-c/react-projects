@@ -1,6 +1,7 @@
 import { UserType } from "../store/users/usersSlice"
 
 type Props = { 
+    loading : boolean,
     users : UserType[],
     deleteUser : (email:string)=>void,
     orderByName : ()=>void,
@@ -9,6 +10,7 @@ type Props = {
  }
 
 const UsersTable = ({ 
+    loading,
     users, 
     deleteUser, 
     orderByName, 
@@ -16,6 +18,7 @@ const UsersTable = ({
     orderByCountry
 } : Props) => {
     return (
+        <>
         <table>
             <thead>
                 <tr>
@@ -50,6 +53,8 @@ const UsersTable = ({
             }
             </tbody>
         </table>
+        { loading ? <h2>Loading...</h2> : null }
+        </>
     )
 }
 

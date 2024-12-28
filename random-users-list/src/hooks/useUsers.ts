@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "./store"
-import { deleteUserAction, OrderBy, resetFiltersAction, setCountryFieldAction } from "../store/users/usersSlice"
+import { deleteUserAction, OrderBy, resetFiltersAction, setCountryFieldAction, nextPage } from "../store/users/usersSlice"
 import { fetchUsers } from "../service/fetchUsers"
 
 const useUsers = () => {
@@ -8,6 +8,8 @@ const useUsers = () => {
     const filters = useAppSelector(state => state.users.filters)
     const filteredUsers = useAppSelector(state => state.users.filteredData)
     const countryField = useAppSelector(state => state.users.countryField)
+    const page = useAppSelector(state=>state.users.page)
+    const status = useAppSelector(state => state.users.status)
     const dispatch = useAppDispatch()
 
     const deleteUser = (email:string) => {
@@ -34,8 +36,13 @@ const useUsers = () => {
         dispatch(setCountryFieldAction(input))
     }
 
+    const getUsers = () => {
+        dispatch(fetchUsers(page))
+        dispatch(nextPage())
+    }
+
     useEffect(()=>{
-        dispatch(fetchUsers())
+        getUsers()
     }, [])
 
     return { 
@@ -43,12 +50,14 @@ const useUsers = () => {
         filteredUsers, 
         filters, 
         countryField,
+        status,
         deleteUser, 
         orderByName, 
         orderByLastname, 
         orderByCountry,
         resetFilters,
-        setCountryField
+        setCountryField,
+        getUsers
     }
 }
 

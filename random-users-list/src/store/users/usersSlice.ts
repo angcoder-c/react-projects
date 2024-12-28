@@ -26,7 +26,8 @@ export type StateType = {
     status : StatusType,
     error : string | null,
     filters : boolean,
-    countryField : string
+    countryField : string,
+    page : number
 }
 
 const initialState : StateType = {
@@ -35,13 +36,18 @@ const initialState : StateType = {
     status : 'idle',
     error : null,
     filters : false,
-    countryField : ''
+    countryField : '',
+    page:1
 }
 
 export const usersSlice = createSlice({
     name : 'users',
     initialState, 
     reducers : {
+        nextPage : (state) => {
+            state.page+=1
+            return state
+        },
         deleteUserAction : (state, action) => {
             state.data = state.data.filter(user => user.email != action.payload)
             state.filteredData = state.filteredData.filter(user => user.email != action.payload)
@@ -84,7 +90,7 @@ export const usersSlice = createSlice({
     },
     extraReducers : (builder) => {
         builder.addCase(fetchUsers.fulfilled, (state, action) => {
-            state.data = action.payload
+            state.data = state.data.concat(action.payload)
             state.status='succeeded' 
         })
 
@@ -102,6 +108,7 @@ export const {
     deleteUserAction, 
     OrderBy, 
     resetFiltersAction, 
-    setCountryFieldAction 
+    setCountryFieldAction,
+    nextPage
 } = usersSlice.actions
 export default usersSlice.reducer

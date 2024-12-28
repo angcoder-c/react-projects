@@ -81,10 +81,6 @@ input[type='text']:focus{
   #root {
     padding: 2rem 10%;
   }
-
-  table {
-    width: auto;
-  }
 }
 
 @media (width<500px) {
