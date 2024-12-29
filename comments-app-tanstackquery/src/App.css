@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: #242424;
+}
+
+main {
+  width: 70%;
+  box-sizing: border-box;
+  padding: 5%;
+}
+
+.comment {
+  box-sizing: border-box;
+  background-color: #141414;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.comment span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+aside {
+  width: 30%;
+  box-sizing: border-box;
+  background-color: #141414;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 5%;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: fixed;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comment-form input[type='text'] {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+  background-color: #242424;
+  color: white;
+  height: 3rem;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: system-ui;
+}
+
+.comment-form textarea {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  resize: none;
+  width: 100%;
+  background-color: #242424;
+  color: white;
+  box-sizing: border-box;
+  padding: 1em;
+  height: 7rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: system-ui;
+
+}
+
+.comment-form button {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+  background-color: #242424;
+  height: 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+
+.comment-form button:hover {
+  background-color: #303030;
+}
+
+.comment-form button:focus {
+  outline: auto;
+}
+
+@media (width<760px) {
+  main {
+    width: 60%;
+  }
+
+  aside {
+    width: 40%;
+  }
+
+  .comment-form textarea {
+    height: 4rem;
+  }
+}
+
+@media (width<600px) {
+  #root {
+    flex-direction: column;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+    margin-top: 1rem;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    position: fixed;
+    max-height: fit-content;
+  }
+}
