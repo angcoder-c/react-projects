@@ -17,10 +17,18 @@ main {
 
 .comment {
   box-sizing: border-box;
-  background-color: #141414;
+  background-color: #0f220c;
   padding: 20px;
   border-radius: 20px;
   margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 0 3px 10px 1px black;
+}
+
+.comment p {
+  max-height: calc(1.5em * 3);
+  overflow: hidden;
+  text-overflow:ellipsis;
 }
 
 .comment span {
@@ -40,6 +48,7 @@ aside {
   bottom: 0;
   top: 0;
   position: fixed;
+  box-shadow: 0 0 15px 1px black;
 }
 
 .comment-form {
@@ -103,6 +112,14 @@ aside {
   outline: auto;
 }
 
+.disabled {
+  opacity: 0.1;
+}
+
+.temp-comment {
+  background-color: #2b2c13;
+}
+
 @media (width<760px) {
   main {
     width: 60%;
@@ -122,6 +139,10 @@ aside {
     flex-direction: column;
   }
 
+  .comments {
+    margin-bottom: 20rem;
+  }
+
   main {
     width: 100%;
   }
@@ -134,5 +155,7 @@ aside {
     left: 0;
     position: fixed;
     max-height: fit-content;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 20px;
   }
 }

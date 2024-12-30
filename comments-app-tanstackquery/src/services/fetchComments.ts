@@ -1,0 +1,15 @@
+const fetchComments = async () => {
+    const response = await fetch('https://api.jsonbin.io/v3/b/67706ca1acd3cb34a8c0c7a3', {
+        headers : {
+            'Content-Type' : 'application/json',
+            'X-Master-Key' : '$2a$10$nS/rJ9e4q5hWQyBnWfU53uAXyno7reqMPFv3v41dxKkd.fWoDm7c.'
+        }
+    })
+
+    if (!response.ok) {
+        throw new Error('get comments error.')
+    }
+    const json = await response.json()
+    return json.record.comments
+}
+export default fetchComments
