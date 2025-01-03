@@ -1,0 +1,296 @@
+[
+    {
+        "id": 1,
+        "question": "Which of these is a journaling file system?",
+        "answers": ["ext3", "FAT32", "NTFS", "exFAT"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 2,
+        "question": "What does the acronym 'OS' stand for?",
+        "answers": ["Operating System", "Open Source", "Offline Software", "Optical System"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 3,
+        "question": "Which company develops the Windows operating system?",
+        "answers": ["Apple", "Google", "Microsoft", "IBM"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 4,
+        "question": "What is the primary function of an operating system?",
+        "answers": ["To manage hardware and software resources", "To edit images", "To browse the internet", "To provide gaming experiences"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 5,
+        "question": "Which of these is an open-source operating system?",
+        "answers": ["Windows", "macOS", "Linux", "iOS"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 6,
+        "question": "What is the name of Apple's desktop operating system?",
+        "answers": ["Windows", "Linux", "macOS", "Android"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 7,
+        "question": "What kernel does Linux use?",
+        "answers": ["NT Kernel", "Linux Kernel", "Mach Kernel", "Darwin Kernel"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 8,
+        "question": "Which operating system is widely used on smartphones?",
+        "answers": ["Android", "Ubuntu", "Windows 10", "FreeBSD"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 9,
+        "question": "Which of these is a real-time operating system?",
+        "answers": ["Windows XP", "RTOS", "Ubuntu", "macOS Monterey"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 10,
+        "question": "What does 'GUI' stand for?",
+        "answers": ["Graphical User Interface", "General User Interaction", "Global Unit Interface", "Generated User Information"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 11,
+        "question": "Which of these operating systems is not Unix-based?",
+        "answers": ["Linux", "Windows", "macOS", "FreeBSD"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 12,
+        "question": "What is the main purpose of a device driver in an OS?",
+        "answers": ["To manage hardware devices", "To design UI layouts", "To process audio signals", "To store data"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 13,
+        "question": "What is the default shell for most Linux distributions?",
+        "answers": ["PowerShell", "Bash", "Command Prompt", "Zsh"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 14,
+        "question": "Which of these is a mobile operating system developed by Apple?",
+        "answers": ["Android", "Windows Mobile", "iOS", "BlackBerry OS"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 15,
+        "question": "Which of these operating systems is specifically designed for servers?",
+        "answers": ["Windows Server", "Ubuntu Desktop", "Android", "macOS Catalina"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 16,
+        "question": "What does 'multitasking' mean in an operating system?",
+        "answers": ["Running multiple operating systems simultaneously", "Executing multiple tasks at the same time", "Running one application forever", "Switching between users"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 17,
+        "question": "Which of these operating systems uses the NTFS file system?",
+        "answers": ["Linux", "Windows", "macOS", "Android"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 18,
+        "question": "Which of the following is a virtual machine software?",
+        "answers": ["VMware", "Linux", "macOS", "iOS"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 19,
+        "question": "Which component of the OS manages memory allocation?",
+        "answers": ["Kernel", "User Interface", "Device Drivers", "File System"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 20,
+        "question": "What is the purpose of swap space in an operating system?",
+        "answers": ["To store temporary files", "To extend RAM capacity", "To boot the system", "To manage network packets"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 21,
+        "question": "Which command is used to list files in a directory in Linux?",
+        "answers": ["ls", "dir", "list", "files"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 22,
+        "question": "What is the primary function of a bootloader?",
+        "answers": ["To load the operating system into memory", "To manage user accounts", "To install software", "To provide graphical interfaces"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 23,
+        "question": "Which file system is commonly used by Linux?",
+        "answers": ["NTFS", "FAT32", "ext4", "APFS"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 24,
+        "question": "What is the primary use of a command-line interface (CLI)?",
+        "answers": ["To interact with the OS using commands", "To design user interfaces", "To edit photos", "To play multimedia"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 25,
+        "question": "Which of the following is NOT an operating system?",
+        "answers": ["Linux", "macOS", "MySQL", "Windows"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 26,
+        "question": "Which operating system introduced the concept of a Recycle Bin?",
+        "answers": ["macOS", "Linux", "Windows", "Unix"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 27,
+        "question": "What is the name of the package manager for Debian-based Linux distributions?",
+        "answers": ["yum", "apt", "pacman", "zypper"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 28,
+        "question": "Which of these operating systems was designed for embedded systems?",
+        "answers": ["Android", "FreeBSD", "Windows CE", "macOS"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 29,
+        "question": "What is the primary purpose of the /etc directory in Linux?",
+        "answers": ["To store user files", "To store configuration files", "To store log files", "To store temporary files"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 30,
+        "question": "Which Windows version was known for introducing the Start Menu?",
+        "answers": ["Windows 3.1", "Windows 95", "Windows XP", "Windows 7"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 31,
+        "question": "What does the term 'kernel panic' refer to?",
+        "answers": ["A hardware failure", "A CPU overload", "A critical system error in the OS kernel", "A virus attack"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 32,
+        "question": "What is the primary difference between 32-bit and 64-bit operating systems?",
+        "answers": ["The size of the installation files", "The type of hardware they support", "The amount of RAM they can address", "The number of users they can handle"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 33,
+        "question": "Which command in Linux is used to view the current working directory?",
+        "answers": ["pwd", "ls", "cd", "whoami"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 34,
+        "question": "What was the name of the first version of macOS?",
+        "answers": ["System 1", "OS X Cheetah", "macOS Mojave", "Macintosh OS"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 35,
+        "question": "Which file system is used by default in Windows 10?",
+        "answers": ["FAT32", "exFAT", "NTFS", "ext4"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 36,
+        "question": "Which of these is a desktop environment used in Linux?",
+        "answers": ["KDE", "Xcode", "DirectX", "Visual Studio"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 37,
+        "question": "What is the name of the system call interface for Unix-based operating systems?",
+        "answers": ["POSIX", "WinAPI", ".NET Core", "JVM"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 38,
+        "question": "Which of the following is a distribution of Linux?",
+        "answers": ["Red Hat", "Solaris", "FreeDOS", "Haiku"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 39,
+        "question": "What is the name of the command used to shut down a Linux system?",
+        "answers": ["shutdown", "exit", "poweroff", "close"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 40,
+        "question": "Which company developed the Unix operating system?",
+        "answers": ["Microsoft", "Bell Labs", "Apple", "IBM"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 41,
+        "question": "What is the purpose of the 'Task Manager' in Windows?",
+        "answers": ["To edit files", "To monitor and manage running processes", "To uninstall programs", "To update drivers"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 42,
+        "question": "What is the command to display network configuration in Windows?",
+        "answers": ["ifconfig", "ipconfig", "netstat", "ping"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 43,
+        "question": "What does the acronym BIOS stand for?",
+        "answers": ["Basic Input/Output System", "Binary Internet Operating System", "Basic Internal Operations Setup", "Basic Input Optimization Software"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 44,
+        "question": "Which of these operating systems is not based on the Linux kernel?",
+        "answers": ["Android", "Ubuntu", "Windows", "Fedora"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 45,
+        "question": "What is the default shell in macOS?",
+        "answers": ["Zsh", "Bash", "Fish", "Tcsh"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 46,
+        "question": "Which of these tools is used to create virtual machines?",
+        "answers": ["VirtualBox", "Eclipse", "Node.js", "Slack"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 47,
+        "question": "What is the purpose of the swap partition in Linux?",
+        "answers": ["To store temporary files", "To extend RAM usage", "To log errors", "To install updates"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 48,
+        "question": "What is the name of the process that runs in the background of an operating system?",
+        "answers": ["Service", "Daemon", "Script", "Thread"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 49,
+        "question": "Which file in Linux contains information about users?",
+        "answers": ["/etc/shadow", "/etc/passwd", "/etc/users", "/home/users"],
+        "correctAnswer": 2
+      }
+  ]
