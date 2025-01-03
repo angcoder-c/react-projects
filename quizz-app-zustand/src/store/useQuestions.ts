@@ -4,7 +4,9 @@ type QuestionType = {
     id : string,
     question : string,
     answers : string[],
-    correctAnswer : number
+    correctAnswer : number,
+    selectUserAnswer? : number,
+    isCorrect? : boolean
 }
 
 type State = {
@@ -12,7 +14,8 @@ type State = {
     currentQuestion : number,
     fetchQuestions : (limit : number) => void,
     nextQuestion : () => void,
-    backQuestion : () => void
+    backQuestion : () => void,
+    selectAnswer : (questionId : string, answerIndex : number) => void
 }
 
 export const useQuestionsStore = create<State>((set, get)=>{
@@ -43,7 +46,7 @@ export const useQuestionsStore = create<State>((set, get)=>{
             }
         },
         backQuestion : () => {
-            const { currentQuestion, questions } = get()
+            const { currentQuestion } = get()
             const backQuestion = currentQuestion - 1
             if (backQuestion >= 0) {
                 set(state => {
@@ -54,6 +57,22 @@ export const useQuestionsStore = create<State>((set, get)=>{
 
                 })
             }
+        },
+        selectAnswer : (questionId : string, answerIndex : number) => {
+            const { questions } = get()
+            const newQuestions = questions.map(question =>{
+                if (question.id === questionId) {
+                    question.selectUserAnswer = answerIndex + 1
+                    question.isCorrect = (question.selectUserAnswer===question.correctAnswer)
+                }
+                return question
+            })
+            set(state => {
+                return {
+                    ...state,
+                    questions : newQuestions
+                }
+            })
         }
     }
 })
