@@ -15,7 +15,8 @@ type State = {
     fetchQuestions : (limit : number) => void,
     nextQuestion : () => void,
     backQuestion : () => void,
-    selectAnswer : (questionId : string, answerIndex : number) => void
+    selectAnswer : (questionId : string, answerIndex : number) => void,
+    reset : ()=>void
 }
 
 export const useQuestionsStore = create<State>((set, get)=>{
@@ -71,6 +72,15 @@ export const useQuestionsStore = create<State>((set, get)=>{
                 return {
                     ...state,
                     questions : newQuestions
+                }
+            })
+        },
+        reset : () => {
+            set(state => {
+                return {
+                    ...state,
+                    questions : [],
+                    currentQuestion : 0
                 }
             })
         }

@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import Results from "./Results"
 import { useQuestionsStore } from "../store/useQuestions"
 
 const Game = () => {
@@ -13,40 +14,53 @@ const Game = () => {
         const newIndex = index+1
         if (question.selectUserAnswer==null) return 'transparent'
         if (newIndex !== question.correctAnswer && newIndex !== question.selectUserAnswer) return 'transparent'
-        if (newIndex===question.correctAnswer) return 'green'
-        if (newIndex===question.selectUserAnswer) return 'red'
+        if (newIndex===question.correctAnswer) return '#144d12'
+        if (newIndex===question.selectUserAnswer) return '#7b2c2c'
         return 'transparent'
     }
 
-    useEffect(()=>{
-        console.log(question.isCorrect)
-        console.log(question.selectUserAnswer)
-    }, [question])
-
     return (
         <div className="item">
-            <button onClick={()=>backQuestion()}>
-                Back
-            </button>
-            <button onClick={()=>nextQuestion()}>
-                Next
-            </button>
-            <span className="question">
-                {question.question}
-            </span>
-            {
-                question.answers.map((answer, index) => {
-                    return (
-                        <p 
-                        key={question.id+index} 
-                        onClick={()=>selectAnswer(question.id, index)}
-                        style={{
-                            backgroundColor : getBackgroundColor(index)
-                        }}
-                        >{answer}</p>
-                    )
-                })
-            }
+            <div className="controls">
+                <button onClick={()=>backQuestion()}>
+                    <span>⬅️</span>
+                </button>
+                <span>
+                    {
+                    `${currentQuestion + 1} / ${questions.length}`
+                    }
+                </span>
+                <button onClick={()=>nextQuestion()}>
+                    <span>➡️</span>
+                </button>
+            </div>
+            <div className="question-body">
+                <div className="question">
+                    <span>{ question.question }</span>
+                </div>
+                <div className="question-body-answers">
+                    {
+                        question.answers.map((answer, index) => {
+                            return (
+                                <div 
+                                    className="answer"
+                                    key={ question.id+index } 
+                                    onClick={
+                                        ()=>selectAnswer(question.id, index)
+                                    }
+                                    style={{
+                                        backgroundColor : getBackgroundColor(index)
+                                    }}
+                                >
+                                    <span>{ answer }</span>
+                                </div>
+                            )
+                        })
+                    }
+
+                </div>
+            </div>
+            <Results/>
         </div>
     )
 }

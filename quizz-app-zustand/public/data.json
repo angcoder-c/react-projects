@@ -1,296 +1,302 @@
 [
-    {
-        "id": 1,
-        "question": "Which of these is a journaling file system?",
-        "answers": ["ext3", "FAT32", "NTFS", "exFAT"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 2,
-        "question": "What does the acronym 'OS' stand for?",
-        "answers": ["Operating System", "Open Source", "Offline Software", "Optical System"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 3,
-        "question": "Which company develops the Windows operating system?",
-        "answers": ["Apple", "Google", "Microsoft", "IBM"],
-        "correctAnswer": 3
-      },
-      {
-        "id": 4,
-        "question": "What is the primary function of an operating system?",
-        "answers": ["To manage hardware and software resources", "To edit images", "To browse the internet", "To provide gaming experiences"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 5,
-        "question": "Which of these is an open-source operating system?",
-        "answers": ["Windows", "macOS", "Linux", "iOS"],
-        "correctAnswer": 3
-      },
-      {
-        "id": 6,
-        "question": "What is the name of Apple's desktop operating system?",
-        "answers": ["Windows", "Linux", "macOS", "Android"],
-        "correctAnswer": 3
-      },
-      {
-        "id": 7,
-        "question": "What kernel does Linux use?",
-        "answers": ["NT Kernel", "Linux Kernel", "Mach Kernel", "Darwin Kernel"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 8,
-        "question": "Which operating system is widely used on smartphones?",
-        "answers": ["Android", "Ubuntu", "Windows 10", "FreeBSD"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 9,
-        "question": "Which of these is a real-time operating system?",
-        "answers": ["Windows XP", "RTOS", "Ubuntu", "macOS Monterey"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 10,
-        "question": "What does 'GUI' stand for?",
-        "answers": ["Graphical User Interface", "General User Interaction", "Global Unit Interface", "Generated User Information"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 11,
-        "question": "Which of these operating systems is not Unix-based?",
-        "answers": ["Linux", "Windows", "macOS", "FreeBSD"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 12,
-        "question": "What is the main purpose of a device driver in an OS?",
-        "answers": ["To manage hardware devices", "To design UI layouts", "To process audio signals", "To store data"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 13,
-        "question": "What is the default shell for most Linux distributions?",
-        "answers": ["PowerShell", "Bash", "Command Prompt", "Zsh"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 14,
-        "question": "Which of these is a mobile operating system developed by Apple?",
-        "answers": ["Android", "Windows Mobile", "iOS", "BlackBerry OS"],
-        "correctAnswer": 3
-      },
-      {
-        "id": 15,
-        "question": "Which of these operating systems is specifically designed for servers?",
-        "answers": ["Windows Server", "Ubuntu Desktop", "Android", "macOS Catalina"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 16,
-        "question": "What does 'multitasking' mean in an operating system?",
-        "answers": ["Running multiple operating systems simultaneously", "Executing multiple tasks at the same time", "Running one application forever", "Switching between users"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 17,
-        "question": "Which of these operating systems uses the NTFS file system?",
-        "answers": ["Linux", "Windows", "macOS", "Android"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 18,
-        "question": "Which of the following is a virtual machine software?",
-        "answers": ["VMware", "Linux", "macOS", "iOS"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 19,
-        "question": "Which component of the OS manages memory allocation?",
-        "answers": ["Kernel", "User Interface", "Device Drivers", "File System"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 20,
-        "question": "What is the purpose of swap space in an operating system?",
-        "answers": ["To store temporary files", "To extend RAM capacity", "To boot the system", "To manage network packets"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 21,
-        "question": "Which command is used to list files in a directory in Linux?",
-        "answers": ["ls", "dir", "list", "files"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 22,
-        "question": "What is the primary function of a bootloader?",
-        "answers": ["To load the operating system into memory", "To manage user accounts", "To install software", "To provide graphical interfaces"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 23,
-        "question": "Which file system is commonly used by Linux?",
-        "answers": ["NTFS", "FAT32", "ext4", "APFS"],
-        "correctAnswer": 3
-      },
-      {
-        "id": 24,
-        "question": "What is the primary use of a command-line interface (CLI)?",
-        "answers": ["To interact with the OS using commands", "To design user interfaces", "To edit photos", "To play multimedia"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 25,
-        "question": "Which of the following is NOT an operating system?",
-        "answers": ["Linux", "macOS", "MySQL", "Windows"],
-        "correctAnswer": 3
-      },
-      {
-        "id": 26,
-        "question": "Which operating system introduced the concept of a Recycle Bin?",
-        "answers": ["macOS", "Linux", "Windows", "Unix"],
-        "correctAnswer": 3
-      },
-      {
-        "id": 27,
-        "question": "What is the name of the package manager for Debian-based Linux distributions?",
-        "answers": ["yum", "apt", "pacman", "zypper"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 28,
-        "question": "Which of these operating systems was designed for embedded systems?",
-        "answers": ["Android", "FreeBSD", "Windows CE", "macOS"],
-        "correctAnswer": 3
-      },
-      {
-        "id": 29,
-        "question": "What is the primary purpose of the /etc directory in Linux?",
-        "answers": ["To store user files", "To store configuration files", "To store log files", "To store temporary files"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 30,
-        "question": "Which Windows version was known for introducing the Start Menu?",
-        "answers": ["Windows 3.1", "Windows 95", "Windows XP", "Windows 7"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 31,
-        "question": "What does the term 'kernel panic' refer to?",
-        "answers": ["A hardware failure", "A CPU overload", "A critical system error in the OS kernel", "A virus attack"],
-        "correctAnswer": 3
-      },
-      {
-        "id": 32,
-        "question": "What is the primary difference between 32-bit and 64-bit operating systems?",
-        "answers": ["The size of the installation files", "The type of hardware they support", "The amount of RAM they can address", "The number of users they can handle"],
-        "correctAnswer": 3
-      },
-      {
-        "id": 33,
-        "question": "Which command in Linux is used to view the current working directory?",
-        "answers": ["pwd", "ls", "cd", "whoami"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 34,
-        "question": "What was the name of the first version of macOS?",
-        "answers": ["System 1", "OS X Cheetah", "macOS Mojave", "Macintosh OS"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 35,
-        "question": "Which file system is used by default in Windows 10?",
-        "answers": ["FAT32", "exFAT", "NTFS", "ext4"],
-        "correctAnswer": 3
-      },
-      {
-        "id": 36,
-        "question": "Which of these is a desktop environment used in Linux?",
-        "answers": ["KDE", "Xcode", "DirectX", "Visual Studio"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 37,
-        "question": "What is the name of the system call interface for Unix-based operating systems?",
-        "answers": ["POSIX", "WinAPI", ".NET Core", "JVM"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 38,
-        "question": "Which of the following is a distribution of Linux?",
-        "answers": ["Red Hat", "Solaris", "FreeDOS", "Haiku"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 39,
-        "question": "What is the name of the command used to shut down a Linux system?",
-        "answers": ["shutdown", "exit", "poweroff", "close"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 40,
-        "question": "Which company developed the Unix operating system?",
-        "answers": ["Microsoft", "Bell Labs", "Apple", "IBM"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 41,
-        "question": "What is the purpose of the 'Task Manager' in Windows?",
-        "answers": ["To edit files", "To monitor and manage running processes", "To uninstall programs", "To update drivers"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 42,
-        "question": "What is the command to display network configuration in Windows?",
-        "answers": ["ifconfig", "ipconfig", "netstat", "ping"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 43,
-        "question": "What does the acronym BIOS stand for?",
-        "answers": ["Basic Input/Output System", "Binary Internet Operating System", "Basic Internal Operations Setup", "Basic Input Optimization Software"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 44,
-        "question": "Which of these operating systems is not based on the Linux kernel?",
-        "answers": ["Android", "Ubuntu", "Windows", "Fedora"],
-        "correctAnswer": 3
-      },
-      {
-        "id": 45,
-        "question": "What is the default shell in macOS?",
-        "answers": ["Zsh", "Bash", "Fish", "Tcsh"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 46,
-        "question": "Which of these tools is used to create virtual machines?",
-        "answers": ["VirtualBox", "Eclipse", "Node.js", "Slack"],
-        "correctAnswer": 1
-      },
-      {
-        "id": 47,
-        "question": "What is the purpose of the swap partition in Linux?",
-        "answers": ["To store temporary files", "To extend RAM usage", "To log errors", "To install updates"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 48,
-        "question": "What is the name of the process that runs in the background of an operating system?",
-        "answers": ["Service", "Daemon", "Script", "Thread"],
-        "correctAnswer": 2
-      },
-      {
-        "id": 49,
-        "question": "Which file in Linux contains information about users?",
-        "answers": ["/etc/shadow", "/etc/passwd", "/etc/users", "/home/users"],
-        "correctAnswer": 2
-      }
-  ]
+  {
+      "id": 1,
+      "question": "Who is Luke Skywalker's father?",
+      "answers": ["Han Solo", "Obi-Wan Kenobi", "Anakin Skywalker", "Yoda"],
+      "correctAnswer": 3
+  },
+  {
+      "id": 2,
+      "question": "What is the name of Han Solo's ship?",
+      "answers": ["X-Wing", "TIE Fighter", "Millennium Falcon", "Slave I"],
+      "correctAnswer": 3
+  },
+  {
+      "id": 3,
+      "question": "What color is Mace Windu's lightsaber?",
+      "answers": ["Green", "Blue", "Red", "Purple"],
+      "correctAnswer": 4
+  },
+  {
+      "id": 4,
+      "question": "What species is Chewbacca?",
+      "answers": ["Ewok", "Wookiee", "Jawa", "Twi'lek"],
+      "correctAnswer": 2
+  },
+  {
+      "id": 5,
+      "question": "Who trained Luke Skywalker in 'The Empire Strikes Back'?",
+      "answers": ["Yoda", "Obi-Wan Kenobi", "Anakin Skywalker", "Mace Windu"],
+      "correctAnswer": 1
+  },
+  {
+      "id": 6,
+      "question": "What planet is Princess Leia from?",
+      "answers": ["Tatooine", "Alderaan", "Naboo", "Coruscant"],
+      "correctAnswer": 2
+  },
+  {
+      "id": 7,
+      "question": "Who built C-3PO?",
+      "answers": ["Obi-Wan Kenobi", "Anakin Skywalker", "Luke Skywalker", "Han Solo"],
+      "correctAnswer": 2
+  },
+  {
+      "id": 8,
+      "question": "What is the Sith title of Emperor Palpatine?",
+      "answers": ["Darth Sidious", "Darth Maul", "Darth Vader", "Darth Plagueis"],
+      "correctAnswer": 1
+  },
+  {
+      "id": 9,
+      "question": "What is the name of the Death Star's superweapon?",
+      "answers": ["Turbo Laser", "Ion Cannon", "Hyperlaser", "Superlaser"],
+      "correctAnswer": 4
+  },
+  {
+      "id": 10,
+      "question": "What species is Yoda?",
+      "answers": ["Twi'lek", "Yoda's species is unknown", "Human", "Wookiee"],
+      "correctAnswer": 2
+  },
+  {
+      "id": 11,
+      "question": "What is the homeworld of the Wookiees?",
+      "answers": ["Dagobah", "Kashyyyk", "Endor", "Hoth"],
+      "correctAnswer": 2
+  },
+  {
+      "id": 12,
+      "question": "What color was the original blade of Anakin Skywalker's lightsaber?",
+      "answers": ["Green", "Blue", "Red", "Purple"],
+      "correctAnswer": 2
+  },
+  {
+      "id": 13,
+      "question": "What bounty hunter captured Han Solo in 'The Empire Strikes Back'?",
+      "answers": ["Boba Fett", "Bossk", "IG-88", "Dengar"],
+      "correctAnswer": 1
+  },
+  {
+      "id": 14,
+      "question": "What does the acronym AT-AT stand for?",
+      "answers": ["All Terrain Armored Transport", "All Terrain Assault Tank", "Armored Tactical Attack Transport", "All Terrain Armored Tank"],
+      "correctAnswer": 1
+  },
+  {
+      "id": 15,
+      "question": "Who is Kylo Ren's mother?",
+      "answers": ["Leia Organa", "Padmé Amidala", "Mon Mothma", "Rey"],
+      "correctAnswer": 1
+  },
+  {
+      "id": 16,
+      "question": "What type of crystal powers a lightsaber?",
+      "answers": ["Sith Crystal", "Kyber Crystal", "Jedi Crystal", "Force Crystal"],
+      "correctAnswer": 2
+  },
+  {
+      "id": 17,
+      "question": "What planet is Rey from?",
+      "answers": ["Jakku", "Tatooine", "Naboo", "Hoth"],
+      "correctAnswer": 1
+  },
+  {
+      "id": 18,
+      "question": "Who says, 'I find your lack of faith disturbing'?",
+      "answers": ["Darth Vader", "Grand Moff Tarkin", "Emperor Palpatine", "Kylo Ren"],
+      "correctAnswer": 1
+  },
+  {
+      "id": 19,
+      "question": "What are the small creatures on Endor called?",
+      "answers": ["Jawas", "Ewoks", "Wookiees", "Twi'leks"],
+      "correctAnswer": 2
+  },
+  {
+      "id": 20,
+      "question": "What is Finn's stormtrooper designation?",
+      "answers": ["FN-2187", "FN-2003", "TK-421", "FN-8888"],
+      "correctAnswer": 1
+  },
+  {
+      "id": 21,
+      "question": "What did Luke lose in his duel with Darth Vader in 'The Empire Strikes Back'?",
+      "answers": ["His left hand", "His right hand", "His lightsaber", "His foot"],
+      "correctAnswer": 2
+  },
+  {
+      "id": 22,
+      "question": "What species is Admiral Ackbar?",
+      "answers": ["Mon Calamari", "Rodian", "Trandoshan", "Twi'lek"],
+      "correctAnswer": 1
+  },
+  {
+      "id": 23,
+      "question": "What is the Sith Rule of Two?",
+      "answers": ["Two Sith must always duel to the death.", "There can only be two Sith: a master and an apprentice.", "The Sith must always have two bases of operation.", "Two Sith must always control the galaxy."],
+      "correctAnswer": 2
+  },
+  {
+      "id": 24,
+      "question": "What was the original title of 'Return of the Jedi'?",
+      "answers": ["Revenge of the Jedi", "The Last Jedi", "Rise of the Jedi", "The Jedi Return"],
+      "correctAnswer": 1
+  },
+  {
+      "id": 25,
+      "question": "Who is the co-pilot of the Millennium Falcon?",
+      "answers": ["Han Solo", "Lando Calrissian", "Chewbacca", "Leia Organa"],
+      "correctAnswer": 3
+  },
+  {
+      "id": 26,
+      "question": "What is the name of the capital planet of the Republic?",
+      "answers": ["Coruscant", "Naboo", "Tatooine", "Alderaan"],
+      "correctAnswer": 1
+  },
+  {
+      "id": 27,
+      "question": "What type of creature is Jabba the Hutt?",
+      "answers": ["Trandoshan", "Hutt", "Rodian", "Mon Calamari"],
+      "correctAnswer": 2
+  },
+  {
+      "id": 28,
+      "question": "What is the name of the Clone Trooper who removed his inhibitor chip in 'The Clone Wars'?",
+      "answers": ["Rex", "Fives", "Echo", "Wolffe"],
+      "correctAnswer": 2
+  },
+  {
+      "id": 29,
+      "question": "What is Ahsoka Tano's nickname?",
+      "answers": ["Snips", "Skyguy", "Commander", "Padawan"],
+      "correctAnswer": 1
+  },
+  {
+      "id": 30,
+      "question": "What is the name of the Mandalorian's ship in the series 'The Mandalorian'?",
+      "answers": ["Slave I", "Razor Crest", "Ghost", "Outrider"],
+      "correctAnswer": 2
+  },
+  {
+    "id": 31,
+    "question": "What is the weapon of choice for Mandalorians?",
+    "answers": ["Vibroblade", "Blaster", "Darksaber", "Beskar Spear"],
+    "correctAnswer": 3
+},
+{
+    "id": 32,
+    "question": "What is the name of Boba Fett's ship?",
+    "answers": ["Slave I", "Razor Crest", "Ebon Hawk", "Outrider"],
+    "correctAnswer": 1
+},
+{
+    "id": 33,
+    "question": "Who killed Qui-Gon Jinn?",
+    "answers": ["Darth Maul", "Darth Vader", "Darth Sidious", "Count Dooku"],
+    "correctAnswer": 1
+},
+{
+    "id": 34,
+    "question": "What does BB-8's name stand for?",
+    "answers": ["No specific meaning", "Binary Ball", "Beep-Boop", "Bright Ball"],
+    "correctAnswer": 1
+},
+{
+    "id": 35,
+    "question": "What planet was the Clone Army created on?",
+    "answers": ["Geonosis", "Kamino", "Tatooine", "Naboo"],
+    "correctAnswer": 2
+},
+{
+    "id": 36,
+    "question": "What is the name of Poe Dameron's astromech droid?",
+    "answers": ["BB-8", "R2-D2", "C-3PO", "K-2SO"],
+    "correctAnswer": 1
+},
+{
+    "id": 37,
+    "question": "Who adopted Leia after Padmé's death?",
+    "answers": ["Mon Mothma", "Bail Organa", "Yoda", "Obi-Wan Kenobi"],
+    "correctAnswer": 2
+},
+{
+    "id": 38,
+    "question": "What species is Watto?",
+    "answers": ["Rodian", "Toydarian", "Hutt", "Mon Calamari"],
+    "correctAnswer": 2
+},
+{
+    "id": 39,
+    "question": "What is the name of the Sith homeworld?",
+    "answers": ["Korriban", "Exegol", "Mustafar", "Dathomir"],
+    "correctAnswer": 1
+},
+{
+    "id": 40,
+    "question": "What is the highest rank in the Jedi Order?",
+    "answers": ["Knight", "Master", "Grand Master", "Padawan"],
+    "correctAnswer": 3
+},
+{
+    "id": 41,
+    "question": "What is the name of Anakin Skywalker's mother?",
+    "answers": ["Padmé", "Shmi", "Sabe", "Beru"],
+    "correctAnswer": 2
+},
+{
+    "id": 42,
+    "question": "What is the weapon used by the Tusken Raiders?",
+    "answers": ["Gaffi Stick", "Blaster Rifle", "Vibroblade", "Bowcaster"],
+    "correctAnswer": 1
+},
+{
+    "id": 43,
+    "question": "What does the TIE in TIE Fighter stand for?",
+    "answers": ["Tactical Imperial Equipment", "Twin Ion Engine", "Turbo Ion Energy", "Tactical Ion Engine"],
+    "correctAnswer": 2
+},
+{
+    "id": 44,
+    "question": "What is the name of the planet where the Jedi Temple was located?",
+    "answers": ["Alderaan", "Coruscant", "Endor", "Dagobah"],
+    "correctAnswer": 2
+},
+{
+    "id": 45,
+    "question": "Who is the leader of the First Order in 'The Force Awakens'?",
+    "answers": ["General Hux", "Kylo Ren", "Snoke", "Captain Phasma"],
+    "correctAnswer": 3
+},
+{
+    "id": 46,
+    "question": "What are the crystalline creatures in 'The Last Jedi' called?",
+    "answers": ["Porgs", "Fathiers", "Vulptices", "Boga"],
+    "correctAnswer": 3
+},
+{
+    "id": 47,
+    "question": "Who says, 'Do or do not. There is no try.'?",
+    "answers": ["Yoda", "Luke Skywalker", "Obi-Wan Kenobi", "Anakin Skywalker"],
+    "correctAnswer": 1
+},
+{
+    "id": 48,
+    "question": "What is the name of Darth Vader's flagship?",
+    "answers": ["Executor", "Devastator", "Imperial One", "Death Star"],
+    "correctAnswer": 1
+},
+{
+    "id": 49,
+    "question": "Who is the Jedi who orders the creation of the Clone Army?",
+    "answers": ["Qui-Gon Jinn", "Obi-Wan Kenobi", "Count Dooku", "Sifo-Dyas"],
+    "correctAnswer": 4
+},
+{
+    "id": 50,
+    "question": "Who kills Supreme Leader Snoke?",
+    "answers": ["Kylo Ren", "Rey", "Finn", "Luke Skywalker"],
+    "correctAnswer": 1
+}
+]
