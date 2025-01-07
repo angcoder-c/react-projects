@@ -10,7 +10,7 @@ function App() {
       <section className='container'>
         <header>
           <div className='logo'> Y </div>
-          <span>Hacker News</span>
+          <span>Hacker News Fake</span>
         </header>
         <TopStories/>
       </section>

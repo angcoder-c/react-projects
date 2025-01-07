@@ -16,16 +16,19 @@ const Story = ({ item, index } : { item : number, index : number }) => {
 
     return (
         <div className="story">
-            <main className="story-main-info">
-                <span>{ index }</span>
-                <a href={currentData?.url}>{currentData?.title}</a>
-                <span>({ currentData?.url.split('/')[2] })</span>
-            </main>
-            <aside>
-                <span>
-                    { currentData?.score } points by { currentData?.by } { getTimeDays(currentData ? currentData.time : 0) } days ago
-                </span>
-            </aside>
+            <div className="story-index">
+                <span>{ index }.</span>
+            </div>
+            <div className="story-main-info">
+                <a className="title" href={currentData?.url}>{currentData?.title}</a>
+                <a className="story-url" href={currentData?.url}> ({ currentData?.url?.split('/')[2] })</a>
+                <div className="story-data">
+                    <span>{ currentData?.score } points</span> 
+                    <a href="#">by { currentData?.by }</a> 
+                    <a href="#">{ getTimeDays(currentData ? currentData.time : 0) }</a>
+                    <a href="#">{ currentData?.kids?.length } comments</a>
+                </div>
+            </div>
         </div>
     )
 }

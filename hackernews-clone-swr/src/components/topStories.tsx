@@ -3,7 +3,7 @@ import { getTopStories } from '../service/newsServices';
 import Story from './story';
 
 const TopStories = () => {
-    const LIMIT_STORIES = 4
+    const LIMIT_STORIES = 15
 
     const { data, size, setSize } = useSWRInfinite(
         (index) => {
@@ -45,6 +45,7 @@ const TopStories = () => {
                     More
                 </button>
             </div>
+            <footer></footer>
         </main>
     )
 }
