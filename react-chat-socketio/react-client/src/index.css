@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+
+#root {
+  margin: 0;
+  padding: 2rem 0;
+  background-color: #242424;
+  font-family: system-ui;
+  justify-content: center;
+  display: flex;
+}
+
+.chat-container {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #141414;
+  box-sizing: border-box;
+  width: 70%;
+  max-width: 350px;
+  min-width: 250px;
+  height: calc(100vh - 4rem);
+  min-height: 10rem;
+  display: grid;
+  grid-template-rows: 1fr 2rem;
+  padding: 2em;
+  grid-gap: 0.5rem;
+}
+
+.new-message {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.messages {
+  max-height: 50rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+}
+

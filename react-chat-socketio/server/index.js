@@ -2,8 +2,9 @@ import express from "express";
 import { Server } from "socket.io";
 import { createServer } from 'node:http'
 
+const MESSAGES = []
 const app = express()
-const httpServer = createServer(app)
+const httpServer = createServer(app) 
 const io = new Server(httpServer, {
     cors : {
         origin: "http://localhost:5173",
@@ -12,14 +13,18 @@ const io = new Server(httpServer, {
 })
 
 io.on('connection', async (socket) => {
-    console.log('usuario conectado')
-    socket.on('disconnect', ()=>{
-        console.log('usuario desconectado')
-    })
-})
+    console.log('user connected')
 
-app.get('/', (req, res)=>{
-    res.send('<h1>App</h1>')
+    socket.on('chat-message', (msg)=>{
+        const username = socket.handshake.auth.username
+        MESSAGES.push(`${username}: ${msg}`)
+        MESSAGES.reverse()
+        io.emit('messages', MESSAGES)
+    })
+
+    socket.on('disconnect', ()=>{
+        console.log('user disconnected')
+    })
 })
 
 httpServer.listen(3000, 'localhost', ()=>{
